@@ -1,0 +1,17 @@
+repositories:
+  bamboomba:
+    type: git
+    url: git@github.com:RIF-Robotics/bamboomba.git
+    version: main
+  bamboomba_simulator:
+    type: git
+    url: git@github.com:RIF-Robotics/bamboomba_simulator.git
+    version: main
+  create_robot:
+    type: git
+    url: https://github.com/AutonomyLab/create_robot.git
+    version: foxy
+  libcreate:
+    type: git
+    url: https://github.com/AutonomyLab/libcreate.git
+    version: master

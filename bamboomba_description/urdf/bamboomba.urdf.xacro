@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<robot name="bamboomba" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- The create's base -->
+  <xacro:include filename="$(find create_description)/urdf/create_1.urdf.xacro" />
+
+  <!-- Include bamboomba's sensors -->
+  <xacro:include filename="$(find bamboomba_description)/urdf/sensors.urdf.xacro" />
+  <xacro:include filename="$(find bamboomba_description)/urdf/sensors.gazebo" />
+
+</robot>

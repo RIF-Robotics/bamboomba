@@ -8,19 +8,28 @@ def generate_launch_description():
 
     teleop_config = path.join(bamboomba_bringup_dir, 'config', 'thrustmaster.yaml')
 
+    rviz_config = path.join(get_package_share_directory('bamboomba_bringup'),
+                               'rviz', 'teleop.rviz')
+
     return LaunchDescription([
         Node(package='joy',
              name='joy_node',
              executable='joy_node',
              output='screen',
-             parameters=['dev': '/dev/input/js0',
-                         'deadzone': '0.2',
-                         'autorepeat_rate': '20.0']
+             parameters=[{'dev': '/dev/input/js0',
+                          'deadzone': 0.2,
+                          'autorepeat_rate': 20.0}]
         ),
-        Node(package='joy_telop',
-             name='joy_telop',
-             executable='joy_telop',
+        Node(package='joy_teleop',
+             name='joy_teleop',
+             executable='joy_teleop',
              output='screen',
-             parameters=['teleop_config': teleop_config]
+             parameters=[teleop_config]
         ),
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_config],
+            output='screen'),
     ])

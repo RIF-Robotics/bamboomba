@@ -12,7 +12,7 @@ def generate_launch_description():
                 'channel_type': 'serial',
                 'serial_port': '/dev/rplidar_a2',
                 'serial_baudrate': 115200,
-                'frame_id': 'laser',
+                'frame_id': 'base_scan',
                 'inverted': False,
                 'angle_compensate': True,
             }],

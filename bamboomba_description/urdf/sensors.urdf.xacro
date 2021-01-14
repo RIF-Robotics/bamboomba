@@ -6,7 +6,7 @@
   <link name="base_scan">
     <inertial>
       <mass value="0.001"/>
-      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <inertia ixx="${dummy_inertia}" ixy="0.0" ixz="0.0" iyy="${dummy_inertia}" iyz="0.0" izz="${dummy_inertia}"/>
     </inertial>
 
@@ -28,7 +28,10 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_scan" />
-    <origin xyz="-0.035 0.0 0.082" rpy="0 0 ${pi+pi/4}" />
+    <!-- Bottom platform -->
+    <!--<origin xyz="-0.035 0.0 0.082" rpy="0 0 0" />-->
+    <!-- Top platform -->
+    <origin xyz="0.0 0.0 0.254" rpy="0 0 ${pi}" />
   </joint>
 
   <!-- RGBD Camera -->

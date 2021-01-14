@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>bamboomba_bringup</name>
+  <name>bamboomba_navigation</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="kevin.demarco@gmail.com">Kevin DeMarco</maintainer>
-  <license>BSD</license>
+  <maintainer email="kevin.demarco@gmail.com">syllogismrxs</maintainer>
+  <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>bamboomba_description</depend>
+  <depend>nav2_bringup</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

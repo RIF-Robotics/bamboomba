@@ -4,8 +4,16 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
+        - /Status1
+        - /Grid1
+        - /Grid1/Status1
         - /RobotModel1/Description Topic1
         - /TF1/Tree1
+        - /Map1
+        - /Map1/Status1
+        - /Map1/Topic1
+        - /Map1/Update Topic1
       Splitter Ratio: 0.5
     Tree Height: 815
   - Class: rviz_common/Selection
@@ -207,14 +215,14 @@ Visualization Manager:
       Enabled: true
       Name: Map
       Topic:
-        Depth: 5
-        Durability Policy: Volatile
+        Depth: 1
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /map
       Update Topic:
-        Depth: 5
-        Durability Policy: Volatile
+        Depth: 1
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /map_updates
@@ -354,25 +362,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.141532897949219
+      Distance: 6.699353218078613
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.24494719505310059
-        Y: -0.3146874010562897
-        Z: 0.13762027025222778
+        X: -2.528903007507324
+        Y: -0.31910842657089233
+        Z: -0.10503994673490524
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6947973370552063
+      Pitch: 0.9497971534729004
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.3554019927978516
+      Yaw: 0.865405797958374
     Saved: ~
 Window Geometry:
   Displays:

@@ -10,10 +10,18 @@ def generate_launch_description():
 
     base_launch_file = path.join(bamboomba_bringup_dir, 'launch', 'base.launch.py')
     rp_lidar_a2_launch_file = path.join(bamboomba_bringup_dir, 'launch', 'rplidar_a2.launch.py')
+    # d435i_launch_file = path.join(get_package_share_directory('realsense2_camera'), 'launch', 'rs_launch.py')
 
     return LaunchDescription([
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(base_launch_file)),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(rp_lidar_a2_launch_file))
+        #IncludeLaunchDescription(
+        #    PythonLaunchDescriptionSource(d435i_launch_file),
+        #    launch_arguments={'enable_accel': 'true',
+        #                      'enable_gyro': 'true',
+        #                      'align_depth': 'true',
+        #                      'enable_depth': 'true',
+        #                      'enable_pointcloud': 'true'}.items())
     ])

@@ -25,19 +25,22 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time')
 
-    rviz_config_dir = os.path.join(
+    rviz_config_file = os.path.join(
         get_package_share_directory('bamboomba_navigation'),
-        'rviz',
-        'navigation.rviz')
+        'rviz', 'nav2.rviz')
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='True',
+            description='Use simulation (Gazebo) clock if true'),
         Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', rviz_config_dir],
+            arguments=['-d', rviz_config_file],
             parameters=[{'use_sim_time': use_sim_time}],
             output='screen'),
     ])
